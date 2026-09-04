@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ru" class="dark">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#050505" />
+        <meta name="description" content="Сход-развал ААА в Санкт-Петербурге — 3D-стенд, регулировка углов колёс с распечаткой до и после. Онлайн-калькулятор, запись без очереди, без предоплаты." />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+        <!--
+      The intro/splash screen animates a car image across the screen in
+      ~1.5s (see CarPass.jsx). Without a preload hint the browser only
+      starts fetching it after React mounts, which — combined with the
+      image's original 1.1MB size — meant the animation window closed
+      before the car ever appeared ("машины не видно на заставке"). The
+      image itself was also compressed from ~1.1MB to ~180KB (pngquant),
+      but preloading it here is what guarantees it starts downloading as
+      early as possible, in parallel with the JS bundle.
+    -->
+        <link rel="preload" as="image" href="/car-cutout-alpha.png" />
+        <title>Сход-развал ААА — Санкт-Петербург | 3D-стенд, запись без очереди</title>
+    </head>
+    <body>
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+        <div id="root"></div>
+    </body>
+</html>

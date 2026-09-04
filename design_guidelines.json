@@ -1,0 +1,140 @@
+{
+  "project_overview": {
+    "name": "Автомойка AAA (Car Wash AAA)",
+    "description": "Award-worthy, single-page landing for a premium local car wash in Saint Petersburg.",
+    "vibe": "Energetic Premium, Dark Mode, High Contrast, Automotive Luxury",
+    "theme": "dark"
+  },
+  "design_system": {
+    "colors": {
+      "background": {
+        "primary": "#050505",
+        "secondary": "#121212",
+        "tertiary": "#1A1A1A"
+      },
+      "text": {
+        "primary": "#FFFFFF",
+        "secondary": "#A3A3A3",
+        "tertiary": "#737373"
+      },
+      "accent": {
+        "primary": "#FF3E15",
+        "hover": "#FF5A36",
+        "glow": "rgba(255, 62, 21, 0.5)"
+      },
+      "surface": {
+        "glass": "rgba(255, 255, 255, 0.03)",
+        "glass_border": "rgba(255, 255, 255, 0.1)"
+      }
+    },
+    "typography": {
+      "font_families": {
+        "heading": "'Unbounded', sans-serif",
+        "body": "'Manrope', sans-serif"
+      },
+      "scales": {
+        "h1": "text-5xl md:text-6xl lg:text-7xl tracking-tighter uppercase font-bold",
+        "h2": "text-4xl md:text-5xl tracking-tight uppercase font-bold",
+        "h3": "text-2xl md:text-3xl tracking-tight font-semibold",
+        "body": "text-base md:text-lg text-[#A3A3A3] leading-relaxed",
+        "label": "text-xs tracking-[0.2em] uppercase text-[#737373]"
+      },
+      "instructions": "ALL fonts MUST support Cyrillic. Ensure Unbounded and Manrope are loaded from Google Fonts in index.html or global css. Do NOT use Inter for headings."
+    },
+    "spacing_and_layout": {
+      "section_padding": "py-24 md:py-32",
+      "container": "max-w-7xl mx-auto px-4 sm:px-6 md:px-8",
+      "grid_gaps": "gap-8 md:gap-16",
+      "border_radius": {
+        "card": "rounded-2xl",
+        "button": "rounded-full"
+      }
+    },
+    "motion_and_interactions": {
+      "global": "Implement @studio-freight/lenis for smooth momentum scrolling. This is MANDATORY for the premium feel.",
+      "reveals": "Use framer-motion for line-by-line text reveals on scroll (y: 100% -> 0%, clip-path mask).",
+      "hover_states": "Buttons should have a scale up effect (scale: 1.05) and a subtle box-shadow glow using the accent color.",
+      "parallax": "Hero image and section background images should have a subtle parallax effect on scroll (y: -10% to 10%)."
+    }
+  },
+  "structure": {
+    "header": {
+      "layout": "Fixed top, glassmorphism (backdrop-blur-md bg-[#050505]/70 border-b border-white/5). z-50.",
+      "elements": "Logo (Text: AAA), Desktop Nav Links, Primary CTA Button 'Записаться'."
+    },
+    "hero": {
+      "layout": "min-h-screen flex items-center justify-center relative overflow-hidden",
+      "visuals": "Background image of wet dark sports car. MUST have overlay: bg-black/50 to bg-gradient-to-t from-[#050505] to-transparent.",
+      "content": "Kinetic typography headline. Staggered reveal. Primary CTA 'ЗАПИСАТЬСЯ НА МОЙКУ' opening booking form."
+    },
+    "marquee": {
+      "layout": "Full width, py-8 border-y border-white/5 overflow-hidden flex whitespace-nowrap",
+      "content": "Continuously scrolling text of services (e.g., 'БЕСКОНТАКТНАЯ МОЙКА • ХИМЧИСТКА...'). Use framer-motion or CSS infinite scroll. Font: Unbounded, text-transparent with stroke-white/20.",
+      "speed": "Slow, elegant drift."
+    },
+    "manifesto_trust": {
+      "layout": "Bento grid (Tetris layout mode). CSS Grid, md:grid-cols-3 gap-6.",
+      "content": "01 Без предоплаты, 02 Оплата после результата, 03 Личная проверка. Use large numbers, high contrast.",
+      "style": "Cards with bg-[#121212], border border-white/5, p-8 rounded-2xl. Hover effect: border-[#FF3E15]/50."
+    },
+    "services_interactive": {
+      "layout": "Vertical list layout with large typographic items.",
+      "content": "6 services. On desktop, hovering a list item should fade in/reveal a specific image related to the service on the side, or attached to the cursor.",
+      "style": "List item: text-3xl md:text-5xl Unbounded, text-white/50 hover:text-white transition-colors py-6 border-b border-white/10."
+    },
+    "promo_banner": {
+      "layout": "Full width container inside px-4. Gradient/accent background.",
+      "style": "bg-[#FF3E15] text-[#050505] rounded-3xl p-12 flex flex-col md:flex-row items-center justify-between overflow-hidden relative.",
+      "content": "Title: 'ОЧИСТКА КУЗОВА ГЛИНОЙ'. Price: '1500₽'. Tag: '+ ПОДАРОК 300₽'. CTA button."
+    },
+    "reviews": {
+      "layout": "Grid of review cards.",
+      "content": "Highlight Google Rating 4.5. Testimonials with stars (Phosphor Icons).",
+      "style": "Glass cards."
+    },
+    "booking_and_contacts": {
+      "layout": "Two columns: Form on left, Contacts on right.",
+      "form": "Customized Shadcn UI inputs. Dark mode styled (bg-transparent, border-white/20). Fields: Name, Phone, Service, Date. Submission triggers WhatsApp URL.",
+      "contacts": "Address (Московский пр., 191А), Google Map (grayscale/dark mode iframe or placeholder image), Phone number, Hours."
+    }
+  },
+  "media": {
+    "images": [
+      {
+        "category": "hero",
+        "url": "https://images.unsplash.com/photo-1661050629684-1c3109469524?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NjZ8MHwxfHNlYXJjaHwyfHxibGFjayUyMHNwb3J0cyUyMGNhciUyMHdldCUyMHdhdGVyJTIwZHJvcHMlMjBkYXJrJTIwY2luZW1hdGljfGVufDB8fHx8MTc4ODAzMjc4NHww&ixlib=rb-4.1.0&q=85",
+        "description": "Front of black car with water droplets, dramatic lighting. Use with black/50 overlay."
+      },
+      {
+        "category": "services_polishing",
+        "url": "https://images.unsplash.com/photo-1620584898989-d39f7f9ed1b7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHxjYXIlMjBkZXRhaWxpbmclMjBwb2xpc2hpbmclMjBmb2FtJTIwZGFya3xlbnwwfHx8fDE3ODgwMzI3ODR8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Red power tool polishing a dark car. Energetic."
+      },
+      {
+        "category": "services_wheels",
+        "url": "https://images.unsplash.com/photo-1708805283017-c662be2c7a44?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwzfHxjYXIlMjBkZXRhaWxpbmclMjBwb2xpc2hpbmclMjBmb2FtJTIwZGFya3xlbnwwfHx8fDE3ODgwMzI3ODR8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Close up of clean car wheel."
+      },
+      {
+        "category": "services_interior",
+        "url": "https://images.unsplash.com/photo-1614527255138-018e29ff34ee?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwxfHxjYXIlMjBpbnRlcmlvciUyMGNsZWFuaW5nJTIwZGV0YWlsaW5nJTIwbGVhdGhlcnxlbnwwfHx8fDE3ODgwMzI3ODR8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Red and black car interior detailing."
+      }
+    ],
+    "icons": "Use @phosphor-icons/react or lucide-react. Sharp, technical aesthetic."
+  },
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "You MUST NOT use complete transparent backgrounds for headers or overlays that have text. Always use backdrop-blur and a tint (e.g. bg-[#050505]/80).",
+    "All interactive elements MUST have data-testid attributes for testing.",
+    "Do not use basic transition-all. Be specific: transition-transform, transition-colors.",
+    "Do not center-align everything. Use Left alignment for text blocks and grids to maintain a Swiss layout feel.",
+    "Ensure Shadcn UI components are restyled to fit the Dark Energetic theme. Strip out standard white backgrounds and Vercel-like borders.",
+    "Add 'dark' class to html or body to ensure tailwind dark mode utilities are active by default.",
+    "Implement the WhatsApp booking logic: const url = `https://wa.me/YOUR_NUMBER?text=...`; window.open(url, '_blank')."
+  ],
+  "dependencies_to_install": [
+    "framer-motion",
+    "@studio-freight/lenis",
+    "lucide-react"
+  ]
+}
